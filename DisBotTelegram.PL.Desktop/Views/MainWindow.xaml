@@ -40,7 +40,11 @@
         <TextBlock Grid.Column="1" Grid.ColumnSpan="3" Text="LOGIN" FontSize="25" HorizontalAlignment="Center"/>
         <TextBox Grid.ColumnSpan="3" Grid.Column="1" Grid.Row="1" Margin="5" Text="{Binding Login ,ValidatesOnExceptions=True, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True}"/>
         <TextBlock Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Text="Password" FontSize="25" HorizontalAlignment="Center"/>
-        <PasswordBox Grid.ColumnSpan="3" Grid.Column="1" Grid.Row="3" Margin="5" x:Name="PasswordBox" Pass:PasswordBoxAssistant.BindPassword="True" Pass:PasswordBoxAssistant.BoundPassword="{Binding Password, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+        <PasswordBox Grid.ColumnSpan="3" Grid.Column="1" Grid.Row="3" Margin="5" x:Name="PasswordBox" Pass:PasswordBoxAssistant.BindPassword="True" Pass:PasswordBoxAssistant.BoundPassword="{Binding Password, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}">
+            <PasswordBox.InputBindings>
+                <KeyBinding Command="{Binding Path=EnterLogin}" Key="Enter"></KeyBinding>
+            </PasswordBox.InputBindings>
+        </PasswordBox>
         <Button Content="OK" Grid.Column="1"  Grid.ColumnSpan="3" Grid.Row="5" CommandParameter="{x:Type Views:DispatcherWindow}" Command="{Binding EnterLogin}"/>
         <Button IsEnabled="{Binding IsConnectedAdmin}" Content="EnterAsAdmin" Grid.Column="1" Grid.Row="7" CommandParameter="{x:Type Views:AdminWindow}" Command="{Binding ShowDialogCommand}"/>
         <Button IsEnabled="{Binding IsConnectedDispatcher}" Content="EnterAsDispatcer" Grid.Column="3" Grid.Row="7" CommandParameter="{x:Type Views:DispatcherWindow}" Command="{Binding ShowDialogCommand}"/>

@@ -85,7 +85,11 @@
         </ListBox>
         <TextBlock Margin="5" Grid.Row="4" Text="{Binding UserName}"/>
         <ComboBox Margin="5" Grid.Row="3" ItemsSource="{Binding ClientsChat}" SelectedItem="{Binding ChoiceClient}"/>
-        <TextBox Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" Margin="4" Text="{Binding MessageChat}"/>
+        <TextBox Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" Margin="4" Text="{Binding MessageChat, UpdateSourceTrigger=PropertyChanged}">
+            <TextBox.InputBindings>
+                <KeyBinding Command="{Binding Path=SendMessageCommand}" Key="Enter" />
+            </TextBox.InputBindings>
+        </TextBox>
         
         <Button Content="Send" Grid.Row="4" Grid.ColumnSpan="2" Grid.Column="3" Margin="5" Command="{Binding SendMessageCommand}" IsEnabled="{Binding IsSendMessage}"/>
         <Button Content="On" Grid.Row="3" Grid.Column="3" Margin="5" Command="{Binding ConnectCommand}" IsEnabled="{Binding IsConnect}"/>

@@ -1,0 +1,87 @@
+c:\users\user\documents\visual studio 2015\Projects\DisBotTelegram.PL.Desktop\DisBotTelegram.BLL\obj\Debug\DisBotTelegram.BLL.csprojResolveAssemblyReference.cache
+c:\users\user\documents\visual studio 2015\Projects\DisBotTelegram.PL.Desktop\DisBotTelegram.BLL\bin\Debug\DisBotTelegram.BLL.dll
+c:\users\user\documents\visual studio 2015\Projects\DisBotTelegram.PL.Desktop\DisBotTelegram.BLL\bin\Debug\DisBotTelegram.BLL.pdb
+c:\users\user\documents\visual studio 2015\Projects\DisBotTelegram.PL.Desktop\DisBotTelegram.BLL\bin\Debug\AutoMapper.dll
+c:\users\user\documents\visual studio 2015\Projects\DisBotTelegram.PL.Desktop\DisBotTelegram.BLL\bin\Debug\DisBotTelegram.DAL.dll
+c:\users\user\documents\visual studio 2015\Projects\DisBotTelegram.PL.Desktop\DisBotTelegram.BLL\bin\Debug\Newtonsoft.Json.dll
+c:\users\user\documents\visual studio 2015\Projects\DisBotTelegram.PL.Desktop\DisBotTelegram.BLL\bin\Debug\Telegram.Bot.dll
+c:\users\user\documents\visual studio 2015\Projects\DisBotTelegram.PL.Desktop\DisBotTelegram.BLL\bin\Debug\EntityFramework.dll
+c:\users\user\documents\visual studio 2015\Projects\DisBotTelegram.PL.Desktop\DisBotTelegram.BLL\bin\Debug\DisBotTelegram.DAL.pdb
+c:\users\user\documents\visual studio 2015\Projects\DisBotTelegram.PL.Desktop\DisBotTelegram.BLL\bin\Debug\AutoMapper.pdb
+c:\users\user\documents\visual studio 2015\Projects\DisBotTelegram.PL.Desktop\DisBotTelegram.BLL\bin\Debug\AutoMapper.xml
+c:\users\user\documents\visual studio 2015\Projects\DisBotTelegram.PL.Desktop\DisBotTelegram.BLL\bin\Debug\Newtonsoft.Json.xml
+c:\users\user\documents\visual studio 2015\Projects\DisBotTelegram.PL.Desktop\DisBotTelegram.BLL\bin\Debug\Telegram.Bot.xml
+c:\users\user\documents\visual studio 2015\Projects\DisBotTelegram.PL.Desktop\DisBotTelegram.BLL\bin\Debug\EntityFramework.xml
+c:\users\user\documents\visual studio 2015\Projects\DisBotTelegram.PL.Desktop\DisBotTelegram.BLL\obj\Debug\DisBotTelegram.BLL.Localization.resources
+c:\users\user\documents\visual studio 2015\Projects\DisBotTelegram.PL.Desktop\DisBotTelegram.BLL\obj\Debug\DisBotTelegram.BLL.csproj.GenerateResource.Cache
+c:\users\user\documents\visual studio 2015\Projects\DisBotTelegram.PL.Desktop\DisBotTelegram.BLL\obj\Debug\DisBotTelegram.BLL.dll
+c:\users\user\documents\visual studio 2015\Projects\DisBotTelegram.PL.Desktop\DisBotTelegram.BLL\obj\Debug\DisBotTelegram.BLL.pdb
+D:\Учеба\Курсовые\1\DisBotTelegram.PL.Desktop\DisBotTelegram.BLL\bin\Debug\DisBotTelegram.BLL.dll
+D:\Учеба\Курсовые\1\DisBotTelegram.PL.Desktop\DisBotTelegram.BLL\bin\Debug\DisBotTelegram.BLL.pdb
+D:\Учеба\Курсовые\1\DisBotTelegram.PL.Desktop\DisBotTelegram.BLL\bin\Debug\AutoMapper.dll
+D:\Учеба\Курсовые\1\DisBotTelegram.PL.Desktop\DisBotTelegram.BLL\bin\Debug\DisBotTelegram.DAL.dll
+D:\Учеба\Курсовые\1\DisBotTelegram.PL.Desktop\DisBotTelegram.BLL\bin\Debug\Newtonsoft.Json.dll
+D:\Учеба\Курсовые\1\DisBotTelegram.PL.Desktop\DisBotTelegram.BLL\bin\Debug\Telegram.Bot.dll
+D:\Учеба\Курсовые\1\DisBotTelegram.PL.Desktop\DisBotTelegram.BLL\bin\Debug\EntityFramework.dll
+D:\Учеба\Курсовые\1\DisBotTelegram.PL.Desktop\DisBotTelegram.BLL\bin\Debug\DisBotTelegram.DAL.pdb
+D:\Учеба\Курсовые\1\DisBotTelegram.PL.Desktop\DisBotTelegram.BLL\bin\Debug\DisBotTelegram.DAL.dll.config
+D:\Учеба\Курсовые\1\DisBotTelegram.PL.Desktop\DisBotTelegram.BLL\bin\Debug\AutoMapper.pdb
+D:\Учеба\Курсовые\1\DisBotTelegram.PL.Desktop\DisBotTelegram.BLL\bin\Debug\AutoMapper.xml
+D:\Учеба\Курсовые\1\DisBotTelegram.PL.Desktop\DisBotTelegram.BLL\bin\Debug\Newtonsoft.Json.xml
+D:\Учеба\Курсовые\1\DisBotTelegram.PL.Desktop\DisBotTelegram.BLL\bin\Debug\Telegram.Bot.xml
+D:\Учеба\Курсовые\1\DisBotTelegram.PL.Desktop\DisBotTelegram.BLL\bin\Debug\EntityFramework.xml
+D:\Учеба\Курсовые\1\DisBotTelegram.PL.Desktop\DisBotTelegram.BLL\obj\Debug\DisBotTelegram.BLL.csprojAssemblyReference.cache
+D:\Учеба\Курсовые\1\DisBotTelegram.PL.Desktop\DisBotTelegram.BLL\obj\Debug\DisBotTelegram.BLL.Localization.resources
+D:\Учеба\Курсовые\1\DisBotTelegram.PL.Desktop\DisBotTelegram.BLL\obj\Debug\DisBotTelegram.BLL.csproj.GenerateResource.cache
+D:\Учеба\Курсовые\1\DisBotTelegram.PL.Desktop\DisBotTelegram.BLL\obj\Debug\DisBotTelegram.BLL.csproj.CoreCompileInputs.cache
+D:\Учеба\Курсовые\1\DisBotTelegram.PL.Desktop\DisBotTelegram.BLL\obj\Debug\DisBotTelegram.BLL.csproj.CopyComplete
+D:\Учеба\Курсовые\1\DisBotTelegram.PL.Desktop\DisBotTelegram.BLL\obj\Debug\DisBotTelegram.BLL.dll
+D:\Учеба\Курсовые\1\DisBotTelegram.PL.Desktop\DisBotTelegram.BLL\obj\Debug\DisBotTelegram.BLL.pdb
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop\DisBotTelegram.BLL\bin\Debug\DisBotTelegram.BLL.dll
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop\DisBotTelegram.BLL\bin\Debug\DisBotTelegram.BLL.pdb
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop\DisBotTelegram.BLL\bin\Debug\AutoMapper.dll
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop\DisBotTelegram.BLL\bin\Debug\DisBotTelegram.DAL.dll
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop\DisBotTelegram.BLL\bin\Debug\Newtonsoft.Json.dll
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop\DisBotTelegram.BLL\bin\Debug\Telegram.Bot.dll
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop\DisBotTelegram.BLL\bin\Debug\EntityFramework.dll
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop\DisBotTelegram.BLL\bin\Debug\DisBotTelegram.DAL.pdb
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop\DisBotTelegram.BLL\bin\Debug\DisBotTelegram.DAL.dll.config
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop\DisBotTelegram.BLL\bin\Debug\AutoMapper.pdb
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop\DisBotTelegram.BLL\bin\Debug\AutoMapper.xml
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop\DisBotTelegram.BLL\bin\Debug\Newtonsoft.Json.xml
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop\DisBotTelegram.BLL\bin\Debug\Telegram.Bot.xml
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop\DisBotTelegram.BLL\bin\Debug\EntityFramework.xml
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop\DisBotTelegram.BLL\obj\Debug\DisBotTelegram.BLL.csprojAssemblyReference.cache
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop\DisBotTelegram.BLL\obj\Debug\DisBotTelegram.BLL.Localization.resources
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop\DisBotTelegram.BLL\obj\Debug\DisBotTelegram.BLL.csproj.GenerateResource.cache
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop\DisBotTelegram.BLL\obj\Debug\DisBotTelegram.BLL.csproj.CoreCompileInputs.cache
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop\DisBotTelegram.BLL\obj\Debug\DisBotTelegram.BLL.csproj.CopyComplete
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop\DisBotTelegram.BLL\obj\Debug\DisBotTelegram.BLL.dll
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop\DisBotTelegram.BLL\obj\Debug\DisBotTelegram.BLL.pdb
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop2\DisBotTelegram.BLL\bin\Debug\DisBotTelegram.BLL.dll
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop2\DisBotTelegram.BLL\bin\Debug\DisBotTelegram.BLL.pdb
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop2\DisBotTelegram.BLL\bin\Debug\AutoMapper.dll
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop2\DisBotTelegram.BLL\bin\Debug\DisBotTelegram.DAL.dll
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop2\DisBotTelegram.BLL\bin\Debug\Newtonsoft.Json.dll
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop2\DisBotTelegram.BLL\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop2\DisBotTelegram.BLL\bin\Debug\Telegram.Bot.dll
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop2\DisBotTelegram.BLL\bin\Debug\Unity.Abstractions.dll
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop2\DisBotTelegram.BLL\bin\Debug\Unity.Container.dll
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop2\DisBotTelegram.BLL\bin\Debug\EntityFramework.dll
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop2\DisBotTelegram.BLL\bin\Debug\DisBotTelegram.DAL.pdb
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop2\DisBotTelegram.BLL\bin\Debug\DisBotTelegram.DAL.dll.config
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop2\DisBotTelegram.BLL\bin\Debug\AutoMapper.pdb
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop2\DisBotTelegram.BLL\bin\Debug\AutoMapper.xml
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop2\DisBotTelegram.BLL\bin\Debug\Newtonsoft.Json.xml
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop2\DisBotTelegram.BLL\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop2\DisBotTelegram.BLL\bin\Debug\Telegram.Bot.xml
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop2\DisBotTelegram.BLL\bin\Debug\Unity.Abstractions.pdb
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop2\DisBotTelegram.BLL\bin\Debug\Unity.Container.pdb
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop2\DisBotTelegram.BLL\bin\Debug\EntityFramework.xml
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop2\DisBotTelegram.BLL\obj\Debug\DisBotTelegram.BLL.csprojAssemblyReference.cache
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop2\DisBotTelegram.BLL\obj\Debug\DisBotTelegram.BLL.Localization.resources
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop2\DisBotTelegram.BLL\obj\Debug\DisBotTelegram.BLL.csproj.GenerateResource.cache
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop2\DisBotTelegram.BLL\obj\Debug\DisBotTelegram.BLL.csproj.CoreCompileInputs.cache
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop2\DisBotTelegram.BLL\obj\Debug\DisBotTelegram.BLL.csproj.CopyComplete
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop2\DisBotTelegram.BLL\obj\Debug\DisBotTelegram.BLL.dll
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop2\DisBotTelegram.BLL\obj\Debug\DisBotTelegram.BLL.pdb

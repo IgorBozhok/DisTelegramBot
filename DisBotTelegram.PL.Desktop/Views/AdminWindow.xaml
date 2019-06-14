@@ -91,7 +91,11 @@
                     <Label Margin="5" Content="Paswword" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center"/>
                     <PasswordBox x:Name="PasswordBox" Pass:PasswordBoxAssistant.BindPassword="True" Pass:PasswordBoxAssistant.BoundPassword="{Binding Paswword, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Margin="5" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2"  />
                     <Label Margin="5" Content="Confirm Password" Grid.Row="5" Grid.Column="1"  Grid.ColumnSpan="2" HorizontalAlignment="Center"/>
-                    <PasswordBox x:Name="PasswordBox1" Pass:PasswordBoxAssistant.BindPassword="True" Pass:PasswordBoxAssistant.BoundPassword="{Binding RepeatPassword, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged ,ValidatesOnExceptions=True, ValidatesOnDataErrors=True, NotifyOnValidationError=True}" Margin="5" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2" />
+                    <PasswordBox x:Name="PasswordBox1" Pass:PasswordBoxAssistant.BindPassword="True" Pass:PasswordBoxAssistant.BoundPassword="{Binding RepeatPassword, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged ,ValidatesOnExceptions=True, ValidatesOnDataErrors=True, NotifyOnValidationError=True}" Margin="5" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2">
+                        <PasswordBox.InputBindings>
+                            <KeyBinding Command="{Binding SaveCommand}" Key="Enter"/>
+                        </PasswordBox.InputBindings>
+                    </PasswordBox>
                     <TextBlock Margin="5" Grid.Row="6" Grid.Column="3"  Grid.ColumnSpan="2" Text="{Binding CheckPaswwordText}"/>
                     <Label Margin="5" Content="First Name" Grid.Row="1" Grid.Column="5" Grid.ColumnSpan="2" HorizontalAlignment="Center"/>
                     <TextBox Margin="5" Grid.Row="2" Grid.Column="5" Grid.ColumnSpan="2" Text="{Binding FirstName}" />

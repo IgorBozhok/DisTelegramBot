@@ -324,6 +324,7 @@ namespace DisBotTelegram.PL.Desktop.ViewModels
 
             };
             _modelDespatcherMessageService.Add(addDispatcherMessage);
+            MessageChat = String.Empty;
         }
 
         private void CheckUserName()

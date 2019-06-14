@@ -1,0 +1,78 @@
+c:\users\user\documents\visual studio 2015\Projects\DisBotTelegram.PL.Desktop\DisBotTelegram.DAL\obj\Debug\DisBotTelegram.DAL.csprojResolveAssemblyReference.cache
+c:\users\user\documents\visual studio 2015\Projects\DisBotTelegram.PL.Desktop\DisBotTelegram.DAL\bin\Debug\DisBotTelegram.DAL.dll.config
+c:\users\user\documents\visual studio 2015\Projects\DisBotTelegram.PL.Desktop\DisBotTelegram.DAL\bin\Debug\DisBotTelegram.DAL.dll
+c:\users\user\documents\visual studio 2015\Projects\DisBotTelegram.PL.Desktop\DisBotTelegram.DAL\bin\Debug\DisBotTelegram.DAL.pdb
+c:\users\user\documents\visual studio 2015\Projects\DisBotTelegram.PL.Desktop\DisBotTelegram.DAL\bin\Debug\EntityFramework.dll
+c:\users\user\documents\visual studio 2015\Projects\DisBotTelegram.PL.Desktop\DisBotTelegram.DAL\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\user\documents\visual studio 2015\Projects\DisBotTelegram.PL.Desktop\DisBotTelegram.DAL\bin\Debug\EntityFramework.xml
+c:\users\user\documents\visual studio 2015\Projects\DisBotTelegram.PL.Desktop\DisBotTelegram.DAL\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\user\documents\visual studio 2015\Projects\DisBotTelegram.PL.Desktop\DisBotTelegram.DAL\obj\Debug\DisBotTelegram.DAL.dll
+c:\users\user\documents\visual studio 2015\Projects\DisBotTelegram.PL.Desktop\DisBotTelegram.DAL\obj\Debug\DisBotTelegram.DAL.pdb
+C:\Users\User\Documents\Visual Studio 2015\Projects\DisBotTelegram.PL.Desktop\DisBotTelegram.DAL\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\User\Documents\Visual Studio 2015\Projects\DisBotTelegram.PL.Desktop\DisBotTelegram.DAL\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\User\Documents\Visual Studio 2015\Projects\DisBotTelegram.PL.Desktop\DisBotTelegram.DAL\bin\Debug\System.ValueTuple.dll
+C:\Users\User\Documents\Visual Studio 2015\Projects\DisBotTelegram.PL.Desktop\DisBotTelegram.DAL\bin\Debug\Unity.Abstractions.dll
+C:\Users\User\Documents\Visual Studio 2015\Projects\DisBotTelegram.PL.Desktop\DisBotTelegram.DAL\bin\Debug\Unity.Container.dll
+C:\Users\User\Documents\Visual Studio 2015\Projects\DisBotTelegram.PL.Desktop\DisBotTelegram.DAL\bin\Debug\System.ValueTuple.xml
+C:\Users\User\Documents\Visual Studio 2015\Projects\DisBotTelegram.PL.Desktop\DisBotTelegram.DAL\bin\Debug\Unity.Abstractions.pdb
+C:\Users\User\Documents\Visual Studio 2015\Projects\DisBotTelegram.PL.Desktop\DisBotTelegram.DAL\bin\Debug\Unity.Container.pdb
+D:\Учеба\Курсовые\1\DisBotTelegram.PL.Desktop\DisBotTelegram.DAL\bin\Debug\DisBotTelegram.DAL.dll.config
+D:\Учеба\Курсовые\1\DisBotTelegram.PL.Desktop\DisBotTelegram.DAL\bin\Debug\DisBotTelegram.DAL.dll
+D:\Учеба\Курсовые\1\DisBotTelegram.PL.Desktop\DisBotTelegram.DAL\bin\Debug\DisBotTelegram.DAL.pdb
+D:\Учеба\Курсовые\1\DisBotTelegram.PL.Desktop\DisBotTelegram.DAL\bin\Debug\EntityFramework.dll
+D:\Учеба\Курсовые\1\DisBotTelegram.PL.Desktop\DisBotTelegram.DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\Учеба\Курсовые\1\DisBotTelegram.PL.Desktop\DisBotTelegram.DAL\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Учеба\Курсовые\1\DisBotTelegram.PL.Desktop\DisBotTelegram.DAL\bin\Debug\System.ValueTuple.dll
+D:\Учеба\Курсовые\1\DisBotTelegram.PL.Desktop\DisBotTelegram.DAL\bin\Debug\Unity.Abstractions.dll
+D:\Учеба\Курсовые\1\DisBotTelegram.PL.Desktop\DisBotTelegram.DAL\bin\Debug\Unity.Container.dll
+D:\Учеба\Курсовые\1\DisBotTelegram.PL.Desktop\DisBotTelegram.DAL\bin\Debug\EntityFramework.xml
+D:\Учеба\Курсовые\1\DisBotTelegram.PL.Desktop\DisBotTelegram.DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\Учеба\Курсовые\1\DisBotTelegram.PL.Desktop\DisBotTelegram.DAL\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Учеба\Курсовые\1\DisBotTelegram.PL.Desktop\DisBotTelegram.DAL\bin\Debug\System.ValueTuple.xml
+D:\Учеба\Курсовые\1\DisBotTelegram.PL.Desktop\DisBotTelegram.DAL\bin\Debug\Unity.Abstractions.pdb
+D:\Учеба\Курсовые\1\DisBotTelegram.PL.Desktop\DisBotTelegram.DAL\bin\Debug\Unity.Container.pdb
+D:\Учеба\Курсовые\1\DisBotTelegram.PL.Desktop\DisBotTelegram.DAL\obj\Debug\DisBotTelegram.DAL.csprojAssemblyReference.cache
+D:\Учеба\Курсовые\1\DisBotTelegram.PL.Desktop\DisBotTelegram.DAL\obj\Debug\DisBotTelegram.DAL.csproj.CoreCompileInputs.cache
+D:\Учеба\Курсовые\1\DisBotTelegram.PL.Desktop\DisBotTelegram.DAL\obj\Debug\DisBotTelegram.DAL.csproj.CopyComplete
+D:\Учеба\Курсовые\1\DisBotTelegram.PL.Desktop\DisBotTelegram.DAL\obj\Debug\DisBotTelegram.DAL.dll
+D:\Учеба\Курсовые\1\DisBotTelegram.PL.Desktop\DisBotTelegram.DAL\obj\Debug\DisBotTelegram.DAL.pdb
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop\DisBotTelegram.DAL\obj\Debug\DisBotTelegram.DAL.csprojAssemblyReference.cache
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop\DisBotTelegram.DAL\obj\Debug\DisBotTelegram.DAL.csproj.CoreCompileInputs.cache
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop\DisBotTelegram.DAL\obj\Debug\DisBotTelegram.DAL.dll
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop\DisBotTelegram.DAL\obj\Debug\DisBotTelegram.DAL.pdb
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop\DisBotTelegram.DAL\bin\Debug\DisBotTelegram.DAL.dll.config
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop\DisBotTelegram.DAL\bin\Debug\DisBotTelegram.DAL.dll
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop\DisBotTelegram.DAL\bin\Debug\DisBotTelegram.DAL.pdb
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop\DisBotTelegram.DAL\bin\Debug\EntityFramework.dll
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop\DisBotTelegram.DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop\DisBotTelegram.DAL\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop\DisBotTelegram.DAL\bin\Debug\System.ValueTuple.dll
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop\DisBotTelegram.DAL\bin\Debug\Unity.Abstractions.dll
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop\DisBotTelegram.DAL\bin\Debug\Unity.Container.dll
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop\DisBotTelegram.DAL\bin\Debug\EntityFramework.xml
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop\DisBotTelegram.DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop\DisBotTelegram.DAL\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop\DisBotTelegram.DAL\bin\Debug\System.ValueTuple.xml
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop\DisBotTelegram.DAL\bin\Debug\Unity.Abstractions.pdb
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop\DisBotTelegram.DAL\bin\Debug\Unity.Container.pdb
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop\DisBotTelegram.DAL\obj\Debug\DisBotTelegram.DAL.csproj.CopyComplete
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop2\DisBotTelegram.DAL\bin\Debug\DisBotTelegram.DAL.dll.config
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop2\DisBotTelegram.DAL\bin\Debug\DisBotTelegram.DAL.dll
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop2\DisBotTelegram.DAL\bin\Debug\DisBotTelegram.DAL.pdb
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop2\DisBotTelegram.DAL\bin\Debug\EntityFramework.dll
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop2\DisBotTelegram.DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop2\DisBotTelegram.DAL\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop2\DisBotTelegram.DAL\bin\Debug\System.ValueTuple.dll
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop2\DisBotTelegram.DAL\bin\Debug\Unity.Abstractions.dll
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop2\DisBotTelegram.DAL\bin\Debug\Unity.Container.dll
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop2\DisBotTelegram.DAL\bin\Debug\EntityFramework.xml
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop2\DisBotTelegram.DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop2\DisBotTelegram.DAL\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop2\DisBotTelegram.DAL\bin\Debug\System.ValueTuple.xml
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop2\DisBotTelegram.DAL\bin\Debug\Unity.Abstractions.pdb
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop2\DisBotTelegram.DAL\bin\Debug\Unity.Container.pdb
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop2\DisBotTelegram.DAL\obj\Debug\DisBotTelegram.DAL.csprojAssemblyReference.cache
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop2\DisBotTelegram.DAL\obj\Debug\DisBotTelegram.DAL.csproj.CoreCompileInputs.cache
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop2\DisBotTelegram.DAL\obj\Debug\DisBotTelegram.DAL.csproj.CopyComplete
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop2\DisBotTelegram.DAL\obj\Debug\DisBotTelegram.DAL.dll
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop2\DisBotTelegram.DAL\obj\Debug\DisBotTelegram.DAL.pdb
