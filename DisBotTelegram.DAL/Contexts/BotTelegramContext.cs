@@ -21,7 +21,7 @@ namespace DisBotTelegram.DAL.Contexts
     {
         static BotTelegramContext()
         {
-            Database.SetInitializer<BotTelegramContext>(new DisBotInitializer());
+            Database.SetInitializer<BotTelegramContext>(new BotTelegramInitializater());
         }
 
         public BotTelegramContext() : base("BotTelegramConnectionString")
