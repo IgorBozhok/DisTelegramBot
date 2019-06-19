@@ -1,5 +1,6 @@
 ﻿using DisBotTelegram.DAL.Entities;
 using DisBotTelegram.DAL.Entities.Base;
+using DisBotTelegram.DAL.Initializers;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -18,6 +19,10 @@ namespace DisBotTelegram.DAL.Contexts
 {
     internal class BotTelegramContext : DbContext
     {
+        static BotTelegramContext()
+        {
+            Database.SetInitializer<BotTelegramContext>(new DisBotInitializer());
+        }
 
         public BotTelegramContext() : base("BotTelegramConnectionString")
         {

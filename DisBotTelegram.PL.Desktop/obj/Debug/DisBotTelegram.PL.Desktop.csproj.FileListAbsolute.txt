@@ -171,3 +171,5 @@ D:\Учеба\WPF\DisBotTelegram.PL.Desktop2\DisBotTelegram.PL.Desktop\obj\Debug
 D:\Учеба\WPF\DisBotTelegram.PL.Desktop2\DisBotTelegram.PL.Desktop\obj\Debug\DisBotTelegram.PL.Desktop.pdb
 D:\Учеба\WPF\DisBotTelegram.PL.Desktop2\DisBotTelegram.PL.Desktop\bin\Debug\DisBotTelegram.PL.Desktop.pdb
 D:\Учеба\WPF\DisBotTelegram.PL.Desktop2\DisBotTelegram.PL.Desktop\obj\Debug\DisBotTelegram.PL.Desktop.exe
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop2\DisBotTelegram.PL.Desktop\obj\Debug\Dictionaries\ResourceColorDictionary.baml
+D:\Учеба\WPF\DisBotTelegram.PL.Desktop2\DisBotTelegram.PL.Desktop\obj\Debug\App.baml

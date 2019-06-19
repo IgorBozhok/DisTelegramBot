@@ -7,15 +7,35 @@
         xmlns:Viewmodel ="clr-namespace:DisBotTelegram.PL.Desktop.ViewModels"
         xmlns:Pass="clr-namespace:DisBotTelegram.PL.Desktop.Helper"
         xmlns:Views ="clr-namespace:DisBotTelegram.PL.Desktop.Views"
+        Background="{DynamicResource LightGreenGradientBrush}"
         x:Name="Window"
         WindowStartupLocation="CenterScreen"
         Title="MainWindow" Height="350" Width="525">
-    
+
 
 
     <Window.DataContext>
         <Viewmodel:MainWindowViewModel/>
     </Window.DataContext>
+
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="FontSize" Value="25"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="MaxWidth" Value="150"/>
+            <Setter Property="Background" Value="{DynamicResource TestBorderGradientBrush}"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="12"/>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        </Style>
+
+    </Window.Resources>
 
     <Grid>
         <Grid.RowDefinitions>
@@ -35,12 +55,12 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
-            
+
         </Grid.ColumnDefinitions>
-        <TextBlock Grid.Column="1" Grid.ColumnSpan="3" Text="LOGIN" FontSize="25" HorizontalAlignment="Center"/>
-        <TextBox Grid.ColumnSpan="3" Grid.Column="1" Grid.Row="1" Margin="5" Text="{Binding Login ,ValidatesOnExceptions=True, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True}"/>
-        <TextBlock Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Text="Password" FontSize="25" HorizontalAlignment="Center"/>
-        <PasswordBox Grid.ColumnSpan="3" Grid.Column="1" Grid.Row="3" Margin="5" x:Name="PasswordBox" Pass:PasswordBoxAssistant.BindPassword="True" Pass:PasswordBoxAssistant.BoundPassword="{Binding Password, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}">
+        <TextBlock Grid.Column="1" Grid.ColumnSpan="3" Text="LOGIN"/>
+        <TextBox Background="LightGray" Grid.ColumnSpan="3" Grid.Column="1" Grid.Row="1" Margin="5" Text="{Binding Login ,ValidatesOnExceptions=True, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True}"/>
+        <TextBlock  Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Text="Password"/>
+        <PasswordBox Background="LightGray" Grid.ColumnSpan="3" Grid.Column="1" Grid.Row="3" Margin="5" x:Name="PasswordBox" Pass:PasswordBoxAssistant.BindPassword="True" Pass:PasswordBoxAssistant.BoundPassword="{Binding Password, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}">
             <PasswordBox.InputBindings>
                 <KeyBinding Command="{Binding Path=EnterLogin}" Key="Enter"></KeyBinding>
             </PasswordBox.InputBindings>

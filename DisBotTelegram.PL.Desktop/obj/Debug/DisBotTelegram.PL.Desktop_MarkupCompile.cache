@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\Учеба\WPF\DisBotTelegram.PL.Desktop2\DisBotTelegram.PL.Desktop\App.xaml
-3-721648044
+4-618933084
 
 23-557829837
 771856981667
-Views\AdminWindow.xaml;Views\DispatcherWindow.xaml;Views\MainWindow.xaml;
+Dictionaries\ResourceColorDictionary.xaml;Views\AdminWindow.xaml;Views\DispatcherWindow.xaml;Views\MainWindow.xaml;
 
-True
+False
 

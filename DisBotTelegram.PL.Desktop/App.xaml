@@ -4,6 +4,6 @@
              xmlns:local="clr-namespace:DisBotTelegram.PL.Desktop"
              StartupUri="Views/MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary Source="Dictionaries/ResourceColorDictionary.xaml"/>
     </Application.Resources>
 </Application>
