@@ -112,6 +112,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Helper\PasswordHelper.cs" />
+    <Compile Include="Helper\StaticLogin.cs" />
     <Compile Include="Logic\BotLogic.cs" />
     <Compile Include="Helper\MEssageViewTemplateSelector.cs" />
     <Compile Include="Model\MessageAll.cs" />

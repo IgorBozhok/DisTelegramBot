@@ -2,6 +2,7 @@
 using DisBotTelegram.BLL.DTO;
 using DisBotTelegram.BLL.Interfaces;
 using DisBotTelegram.BLL.Services;
+using DisBotTelegram.PL.Desktop.Helper;
 using DisBotTelegram.PL.Desktop.Model;
 using DisBotTelegram.PL.Desktop.ReleyCommand;
 using System;
@@ -28,11 +29,9 @@ namespace DisBotTelegram.PL.Desktop.ViewModels
         private bool _isSendMessage;
 
         private ObservableCollection<ClientInfo> _clients;
-        private ObservableCollection<WorkTimeDispatcherInfo> _workTimeDispatchers;
 
         private string _userName;
         private string _message;
-        private UserInfo _disInfo;
         private ObservableCollection<ClientInfo> _clientsChat;
 
         private ClientInfo _сhoiceClient;
@@ -44,6 +43,7 @@ namespace DisBotTelegram.PL.Desktop.ViewModels
         public ICommand ConnectCommand { get; set; }
         public ICommand DisconnectCommand { get; set; }
         public ObservableCollection<DisBotMessage> Messages { get; set; }
+        public UserInfo UserInfo { get; set; }
 
         public ClientInfo ChoiceClient
         {
@@ -126,7 +126,11 @@ namespace DisBotTelegram.PL.Desktop.ViewModels
             for (int i = 0; i < Application.Current.Windows.Count; i++)
             {
                 var window = Application.Current.Windows[i];
-                if (window.Title.Equals("DispatcherWindow"))
+                if (window.Tag == null)
+                {
+                    continue;
+                }
+                else if (window.Tag.Equals("DispatcherWindow"))
                 {
                     Application.Current.Windows[i].Closing += DispatcherViewModel_Closed;
                     break;
@@ -169,12 +173,8 @@ namespace DisBotTelegram.PL.Desktop.ViewModels
 
         private void EventPost()
         {
-            _workTimeDispatchers = _modelWorkTimeDispatcherService.GetWokrsTime();
-            _disInfo = new UserInfo()
-            {
-                Id = _workTimeDispatchers.Last().UserId,
-                UserLogin = _workTimeDispatchers.Last().Login
-            };
+            UserInfo = StaticLogin.UserInfo;
+            Console.WriteLine();
             _botLogic.Log += buffer =>
             {
                 var countClientDB = 0;
@@ -254,7 +254,9 @@ namespace DisBotTelegram.PL.Desktop.ViewModels
                     }
                 }
 
+
                 Messages.Add(buffer);
+                _clients = _modelClientService.GetClients();
                 var tmpId = 0;
                 foreach (var item in _clients)
                 {
@@ -272,8 +274,7 @@ namespace DisBotTelegram.PL.Desktop.ViewModels
                 {
                     MessageClient = _botLogic.Masseges.Content,
                     TimeMassage = _botLogic.Masseges.Date,
-                    UserId = _workTimeDispatchers.Last().UserId,
-                    Id = tmpId,
+                    UserId = UserInfo.Id,
                     ClientId = tmpId
                 };
                 _modelClientMessageService.Add(messageDB);
@@ -309,7 +310,7 @@ namespace DisBotTelegram.PL.Desktop.ViewModels
             {
                 Content = _message,
                 Date = DateTime.Now,
-                UserName = _disInfo.UserLogin,
+                UserName = UserInfo.UserLogin,
                 Type = DisBotMessage.MessageType.InMessage,
             };
             Messages.Add(message);
@@ -319,9 +320,7 @@ namespace DisBotTelegram.PL.Desktop.ViewModels
                 ClientId = tmpId,
                 MessageDispather = _message,
                 TimeMassage = DateTime.Now,
-                UserId = _workTimeDispatchers.Last().UserId,
-                Id = _workTimeDispatchers.Last().UserId
-
+                UserId = UserInfo.Id
             };
             _modelDespatcherMessageService.Add(addDispatcherMessage);
             MessageChat = String.Empty;

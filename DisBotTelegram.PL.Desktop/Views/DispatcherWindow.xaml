@@ -8,24 +8,38 @@
         xmlns:Model ="clr-namespace:DisBotTelegram.BLL.DTO;assembly=DisBotTelegram.BLL"
         mc:Ignorable="d"
         x:Name="Window"
+        Tag="DispatcherWindow"
         WindowStartupLocation="CenterScreen"
-        Title="DispatcherWindow" Height="450" Width="800">
+        Title="Dispatcher menu" Height="450" Width="800"
+        Background="{DynamicResource BlackGrayGradientBrush}">
 
-    
+
+
 
     <Window.Resources>
+        
         <DataTemplate x:Key="InMessageTemplate" DataType="{x:Type Model:DisBotMessage}" >
             <Grid Margin="2">
-                <Border HorizontalAlignment="Right"  BorderBrush="Gray" BorderThickness="1" CornerRadius="2" SnapsToDevicePixels="True">
+                <Border HorizontalAlignment="Right"
+                        BorderThickness="1"
+                        CornerRadius="2"
+                        SnapsToDevicePixels="True">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="auto"/>
                             <ColumnDefinition Width="auto"/>
-                            <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-                        <Label  Background="GreenYellow" Grid.Column="0" Content="{Binding UserName}"/>
-                        <Label  Background="GreenYellow" Grid.Column="1" Content="{Binding Content}"/>
-                        <Label  Background="GreenYellow" Grid.Column="2" Content="{Binding Date}" ContentStringFormat="HH:mm"/>
+                        <Label Grid.Column="0"
+                               FontSize="15"
+                               FontWeight="Bold"
+                               Background="GreenYellow"
+                               Content="{Binding Content}"/>
+                        <Label Grid.Column="1"
+                               Padding="0,15,0,0"
+                               FontSize="10"
+                               Background="GreenYellow"
+                               Content="{Binding Date}"
+                               ContentStringFormat="HH:mm"/>
                     </Grid>
                 </Border>
             </Grid>
@@ -33,24 +47,59 @@
 
         <DataTemplate x:Key="OutMessageTemplate" DataType="{x:Type Model:DisBotMessage}" >
             <Grid  Margin="2">
-                <Border HorizontalAlignment="Left" BorderBrush="Gray" BorderThickness="1" CornerRadius="2" SnapsToDevicePixels="True">
+                <Border HorizontalAlignment="Left"
+                        BorderThickness="4"
+                        CornerRadius="10"
+                        SnapsToDevicePixels="True">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="auto"/>
                             <ColumnDefinition Width="auto"/>
-                            <ColumnDefinition Width="auto"/>
-                            <ColumnDefinition Width="auto"/>
                         </Grid.ColumnDefinitions>
-                        <Label Background="Gray" Grid.Column="0" Content="{Binding Date}" />
-                        <Label Background="Gray" Grid.Column="1" Content="{Binding LastName}"/>
-                        <Label Background="Gray" Grid.Column="2" Content=": "/>
-                        <Label Background="Gray" Grid.Column="3" Content="{Binding Content}"/>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <Label 
+                               Grid.Column="0"
+                               Grid.Row="0"
+                               Background="LightGray" 
+                               FontSize="10"
+                               Foreground="Gray"
+                               HorizontalContentAlignment="Left"
+                               Content="{Binding Date}"
+                               ContentStringFormat="HH:mm"/>
+                        
+                        <Label Grid.Column="1"
+                               Grid.Row="0"
+                               Background="LightGray"
+                               FontWeight="Bold"
+                               FontSize="10"
+                               Foreground="DarkViolet"
+                               HorizontalContentAlignment="Left"
+                               Content="{Binding LastName}"/>
 
-
+                        <Label Grid.Column="0"
+                               Grid.Row="1"
+                               Grid.ColumnSpan="2"
+                               Background="LightGray"
+                               FontWeight="Bold"
+                               FontSize="15"
+                               Content="{Binding Content}"/>
                     </Grid>
                 </Border>
             </Grid>
         </DataTemplate>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="Silver"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="Background" Value="LightGray"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
     </Window.Resources>
 
     <Window.DataContext>
@@ -75,7 +124,13 @@
             <ColumnDefinition Width="auto"/>
         </Grid.ColumnDefinitions>
         
-        <ListBox Grid.Row="2" Grid.ColumnSpan="3" HorizontalContentAlignment="Stretch" Margin="5" ItemsSource="{Binding Messages}" SelectedItem="{Binding ChoiceClient}">
+        <ListBox Grid.Row="2"
+                 Grid.Column="0"
+                 Grid.ColumnSpan="3"
+                 HorizontalContentAlignment="Stretch"
+                 Margin="5"
+                 ItemsSource="{Binding Messages}"
+                 SelectedItem="{Binding ChoiceClient}">
             <ListBox.ItemTemplateSelector>
                 <TemplateSelector:MEssageViewTemplateSelector 
                     InMessage="{StaticResource InMessageTemplate}"
@@ -83,16 +138,42 @@
                 </TemplateSelector:MEssageViewTemplateSelector>
             </ListBox.ItemTemplateSelector>
         </ListBox>
-        <TextBlock Margin="5" Grid.Row="4" Text="{Binding UserName}"/>
-        <ComboBox Margin="5" Grid.Row="3" ItemsSource="{Binding ClientsChat}" SelectedItem="{Binding ChoiceClient}"/>
-        <TextBox Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" Margin="4" Text="{Binding MessageChat, UpdateSourceTrigger=PropertyChanged}">
+        <TextBlock Grid.Column="0"
+                   Grid.Row="4"
+                   Margin="5"
+                   Text="{Binding UserName}"/>
+        <ComboBox Grid.Column="0"
+                  Grid.Row="3"
+                  Margin="5"
+                  ItemsSource="{Binding ClientsChat}"
+                  SelectedItem="{Binding ChoiceClient}"/>
+        <TextBox Grid.Row="5"
+                 Grid.Column="1"
+                 Grid.ColumnSpan="2"
+                 Margin="4"
+                 Text="{Binding MessageChat, UpdateSourceTrigger=PropertyChanged}">
             <TextBox.InputBindings>
                 <KeyBinding Command="{Binding Path=SendMessageCommand}" Key="Enter" />
             </TextBox.InputBindings>
         </TextBox>
-        
-        <Button Content="Send" Grid.Row="4" Grid.ColumnSpan="2" Grid.Column="3" Margin="5" Command="{Binding SendMessageCommand}" IsEnabled="{Binding IsSendMessage}"/>
-        <Button Content="On" Grid.Row="3" Grid.Column="3" Margin="5" Command="{Binding ConnectCommand}" IsEnabled="{Binding IsConnect}"/>
-        <Button Content="Off" Grid.Row="3" Grid.Column="4" Margin="5" Command="{Binding DisconnectCommand}" IsEnabled="{Binding IsDisconnect}"/>
+        <Button Grid.Column="3"
+                Grid.Row="4"
+                Grid.ColumnSpan="2"
+                Content="Send"
+                Margin="5"
+                Command="{Binding SendMessageCommand}"
+                IsEnabled="{Binding IsSendMessage}"/>
+        <Button Grid.Column="3"
+                Grid.Row="3"
+                Content="On"
+                Margin="5"
+                Command="{Binding ConnectCommand}"
+                IsEnabled="{Binding IsConnect}"/>
+        <Button Grid.Column="4"
+                Grid.Row="3"
+                Content="Off"
+                Margin="5"
+                Command="{Binding DisconnectCommand}"
+                IsEnabled="{Binding IsDisconnect}"/>
     </Grid>
 </Window>

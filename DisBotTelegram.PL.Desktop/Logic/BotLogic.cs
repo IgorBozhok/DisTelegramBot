@@ -1,6 +1,7 @@
 ﻿using DisBotTelegram.BLL.DTO;
 using DisBotTelegram.BLL.Interfaces;
 using DisBotTelegram.BLL.Services;
+using DisBotTelegram.PL.Desktop.Helper;
 using DisBotTelegram.PL.Desktop.Model;
 using System;
 using System.Collections.Generic;
@@ -23,9 +24,6 @@ namespace DisBotTelegram.BLL
 
         private SynchronizationContext _synchronizationContext;
         private TelegramBotClient _botclient;
-        private UnityContainer _container;
-        private ModelWorkTimeDispatcherService _modelWorkTimeDispatcherService;
-        private ObservableCollection<WorkTimeDispatcherInfo> _workTimeDispatchers;
 
         public Action<DisBotMessage> Log { get; set; }
 
@@ -39,11 +37,6 @@ namespace DisBotTelegram.BLL
 
         public BotLogic()
         {
-            _container = new UnityContainer();
-            _container.RegisterType<IWorkTimeDispatcherService, WorkTimeDispatcherService>();
-            _modelWorkTimeDispatcherService = new ModelWorkTimeDispatcherService(_container);
-            _workTimeDispatchers = _modelWorkTimeDispatcherService.GetWokrsTime();
-
             _masseges = new DisBotMessage();
             _synchronizationContext = SynchronizationContext.Current;
             _botclient = new TelegramBotClient("744399662:AAFJafKh3iNO_h7upw4sfGN27p9YXbDeKbc");
@@ -104,7 +97,7 @@ namespace DisBotTelegram.BLL
             _masseges.Content = e.Message.Text;
             _masseges.Type = DisBotMessage.MessageType.OutMessage;
             _synchronizationContext.Post(obj => Log?.Invoke(_masseges), null);
-            await _botclient.SendTextMessageAsync(chatId: e.Message.Chat, text: _workTimeDispatchers.Last().Login);
+            await _botclient.SendTextMessageAsync(chatId: e.Message.Chat, text: StaticLogin.UserInfo.UserLogin);
         }
     }
 }

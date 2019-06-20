@@ -7,19 +7,33 @@
         xmlns:Pass="clr-namespace:DisBotTelegram.PL.Desktop.Helper"
         mc:Ignorable="d"
         x:Name="Window"
+        Tag="AdminWindow"
+        Background="{DynamicResource TestBorderGradientBrush}"
         WindowStartupLocation="CenterScreen"
-        Title="AdminWindow" Height="450" Width="800">
+        Title="Admin menu" Height="450" Width="800">
 
-    
+
     <Window.DataContext>
         <Viewmodel:AdminViewModel/>
     </Window.DataContext>
+    <Window.Resources>
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="LawnGreen"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Width" Value="80"/>
+            <Setter Property="Foreground" Value="LawnGreen"/>
+            <Setter Property="Background" Value="{DynamicResource TestBorderGradientBrush}"/>
+        </Style>
+    </Window.Resources>
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="auto" MinHeight="45"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        <TabControl Grid.Row="2" TabStripPlacement="Top" HorizontalContentAlignment="Left" >
+        <TabControl Background="{DynamicResource TestBorderGradientBrush}" TabStripPlacement="Top" HorizontalContentAlignment="Left" >
             <TabItem HorizontalContentAlignment="Stretch">
                 <TabItem.Header>
                     <StackPanel Orientation="Horizontal">
@@ -28,10 +42,8 @@
                 </TabItem.Header>
                 <Grid>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="3*"/>
                         <ColumnDefinition Width="auto"/>
-                        <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="auto"/>
@@ -45,17 +57,51 @@
                         <RowDefinition Height="auto"/>
                         <RowDefinition Height="auto"/>
                     </Grid.RowDefinitions>
-                    <Label Margin="5" Grid.ColumnSpan="2" HorizontalAlignment="Center"  Content="Messages"/>
-                    <ListBox  ItemsSource="{Binding Messages}" Margin="5" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="8"/>
-                    <Label Margin="5" Grid.Column="4" Grid.ColumnSpan="3" HorizontalAlignment="Center"  Content="Dispatcher List"/>
-                    <ComboBox ItemsSource="{Binding Users}" Margin="5" Grid.Column="4" Grid.Row="1" Grid.ColumnSpan="3" SelectedItem="{Binding UserLinq}" />
-                    <Label Margin="5" Grid.Column="4" Grid.ColumnSpan="3" Grid.Row="2" HorizontalAlignment="Center" Content="Client List"/>
-                    <ComboBox ItemsSource="{Binding Clients}" Margin="5" Grid.Column="4" Grid.Row="3" Grid.ColumnSpan="3" SelectedItem="{Binding ClientLinq}"/>
-                    <Label Margin="5" Grid.Column="4" Grid.ColumnSpan="3" Grid.Row="4" HorizontalAlignment="Center" Content="From Date"/>
-                    <DatePicker Margin="5" Grid.Column="4" Grid.ColumnSpan="3" Grid.Row="5" SelectedDateFormat="Short" SelectedDate="{Binding FromDate}"/>
-                    <Label Margin="5" Grid.Column="4" Grid.ColumnSpan="3" Grid.Row="6" HorizontalAlignment="Center" Content="Up To Date"/>
-                    <DatePicker Margin="5" Grid.Column="4" Grid.ColumnSpan="3" Grid.Row="7" SelectedDate="{Binding ToDate}"/>
-                    <Button Command="{Binding OkCommandLinq}" Margin="5" Content="Ok" Grid.Column="4" Grid.Row="8" />
+                    <Label Grid.Column="0"
+                           Grid.Row="0"
+                           Content="Messages"/>
+                    <ListBox Grid.Row="1"
+                             Grid.Column="0"
+                             Grid.RowSpan="8"
+                             Margin="5"
+                             FontSize="15"
+                             ItemsSource="{Binding Messages}"/>
+                    <Label Grid.Column="1" 
+                           Grid.Row ="0"
+                           Content="Dispatcher List" />
+                    <ComboBox Grid.Column="1"
+                              Grid.Row="1"
+                              Margin="5"
+                              ItemsSource="{Binding Users}"
+                              SelectedItem="{Binding UserLinq}"/>
+                    <Label Grid.Column="1"
+                           Grid.Row="2"
+                           HorizontalAlignment="Center"
+                           Content="Client List"/>
+                    <ComboBox Grid.Column="1"
+                              Grid.Row="3"
+                              ItemsSource="{Binding Clients}"
+                              SelectedItem="{Binding ClientLinq}"/>
+                    <Label Grid.Column="1"
+                           Grid.Row="4"
+                           Content="From Date"/>
+                    <DatePicker Grid.Column="1"
+                                Grid.Row="5"
+                                Margin="5"
+                                SelectedDateFormat="Short"
+                                SelectedDate="{Binding FromDate}"/>
+                    <Label Grid.Column="1" 
+                           Grid.Row="6"
+                           Content="Up To Date" Margin="5"/>
+                    <DatePicker Grid.Column="5"
+                                Grid.Row="7"
+                                Margin="5"
+                                SelectedDate="{Binding ToDate}"/>
+                    <Button Grid.Column="1"
+                            Grid.Row="8"
+                            Margin="5"
+                            Content="Ok" 
+                            Command="{Binding OkCommandLinq}"/>
                 </Grid>
             </TabItem>
             <TabItem HorizontalContentAlignment="Stretch">
