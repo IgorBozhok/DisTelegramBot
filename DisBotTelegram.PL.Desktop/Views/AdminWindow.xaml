@@ -18,7 +18,7 @@
     </Window.DataContext>
     <Window.Resources>
         <Style TargetType="Label">
-            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="FontSize" Value="20"/>
             <Setter Property="FontWeight" Value="Bold"/>
             <Setter Property="Foreground" Value="LawnGreen"/>
             <Setter Property="Margin" Value="5"/>
@@ -30,6 +30,14 @@
             <Setter Property="Width" Value="80"/>
             <Setter Property="Foreground" Value="LawnGreen"/>
             <Setter Property="Background" Value="{DynamicResource TestBorderGradientBrush}"/>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="Width" Value="220"/>
+        </Style>
+        <Style TargetType="PasswordBox">
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="Width" Value="220"/>
         </Style>
     </Window.Resources>
     <Grid>
@@ -113,41 +121,72 @@
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="0.5*"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="*"/>
                         <RowDefinition Height="auto"/>
-                        <RowDefinition Height="*"/>
                         <RowDefinition Height="auto"/>
-                        <RowDefinition Height="*"/>
                         <RowDefinition Height="auto"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
                     </Grid.RowDefinitions>
-                    <Label Margin="5" Content="Login" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" />
-                    <TextBox Margin="5" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Text="{Binding Login , ValidatesOnExceptions=True, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True}"/>
-                    <TextBlock Margin="5" Grid.Row="2" Grid.Column="3"  Grid.ColumnSpan="2" Text="{Binding CheckLoginText}" />
-                    <Label Margin="5" Content="Paswword" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center"/>
-                    <PasswordBox x:Name="PasswordBox" Pass:PasswordBoxAssistant.BindPassword="True" Pass:PasswordBoxAssistant.BoundPassword="{Binding Paswword, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Margin="5" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2"  />
-                    <Label Margin="5" Content="Confirm Password" Grid.Row="5" Grid.Column="1"  Grid.ColumnSpan="2" HorizontalAlignment="Center"/>
-                    <PasswordBox x:Name="PasswordBox1" Pass:PasswordBoxAssistant.BindPassword="True" Pass:PasswordBoxAssistant.BoundPassword="{Binding RepeatPassword, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged ,ValidatesOnExceptions=True, ValidatesOnDataErrors=True, NotifyOnValidationError=True}" Margin="5" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2">
+                    <Label Grid.Row="0"
+                           Grid.Column="0"
+                           Content="Login"/>
+                    <TextBox Grid.Row="1"
+                             Grid.Column="0"
+                             Text="{Binding Login , ValidatesOnExceptions=True, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True}"/>
+                    <TextBlock Grid.Row="1"
+                               Grid.Column="1"
+                               FontSize="15"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Center"
+                               Text="{Binding CheckLoginText}" />
+                    <Label Grid.Column="0"
+                           Grid.Row="2"
+                           Content="Paswword"/>
+                    <PasswordBox x:Name="PasswordBox"
+                                 Grid.Column="0"
+                                 Grid.Row="3"
+                                 Pass:PasswordBoxAssistant.BindPassword="True"
+                                 Pass:PasswordBoxAssistant.BoundPassword="{Binding Paswword, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+                    <Label Grid.Column="0"
+                           Grid.Row="4"
+                           Content="Confirm Password"/>
+                    <PasswordBox x:Name="PasswordBox1"
+                                 Grid.Column="0"
+                                 Grid.Row="6"
+                                 Pass:PasswordBoxAssistant.BindPassword="True"
+                                 Pass:PasswordBoxAssistant.BoundPassword="{Binding RepeatPassword, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged ,ValidatesOnExceptions=True, ValidatesOnDataErrors=True, NotifyOnValidationError=True}">
                         <PasswordBox.InputBindings>
                             <KeyBinding Command="{Binding SaveCommand}" Key="Enter"/>
                         </PasswordBox.InputBindings>
                     </PasswordBox>
-                    <TextBlock Margin="5" Grid.Row="6" Grid.Column="3"  Grid.ColumnSpan="2" Text="{Binding CheckPaswwordText}"/>
-                    <Label Margin="5" Content="First Name" Grid.Row="1" Grid.Column="5" Grid.ColumnSpan="2" HorizontalAlignment="Center"/>
-                    <TextBox Margin="5" Grid.Row="2" Grid.Column="5" Grid.ColumnSpan="2" Text="{Binding FirstName}" />
-                    <Label Margin="5" Content="Last Name" Grid.Row="3" Grid.Column="5" Grid.ColumnSpan="2" HorizontalAlignment="Center"/>
-                    <TextBox Margin="5" Grid.Row="4" Grid.Column="5" Grid.ColumnSpan="2" Text="{Binding LastName}"/>
-                    <Button IsEnabled="{Binding IsCorrectPassword}" Margin="5" Content="Save" Grid.Row="6" Grid.Column="5" Grid.ColumnSpan="2" Command="{Binding SaveCommand}"/>
+                    <TextBlock Grid.Column="1"                        
+                               Grid.Row="6"
+                               FontSize="15" 
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Center"
+                               Text="{Binding CheckPaswwordText}"/>
+                    <Label Grid.Column="2"
+                           Grid.Row="0"                 
+                           Content="First Name"/>
+                    <TextBox Grid.Column="2"
+                             Grid.Row="1"
+                             Text="{Binding FirstName}" />
+                    <Label Grid.Column="2"
+                           Grid.Row="2"
+                           Content="Last Name"/>
+                    <TextBox Grid.Column="2"
+                             Grid.Row="3"
+                             Text="{Binding LastName}"/>
+                    <Button Grid.Column="2"
+                            Grid.Row="6"
+                            Content="Save"
+                            IsEnabled="{Binding IsCorrectPassword}"
+                            Command="{Binding SaveCommand}"/>
                 </Grid>
             </TabItem>
         </TabControl>
