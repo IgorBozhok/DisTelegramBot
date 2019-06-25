@@ -44,6 +44,6 @@ namespace DisBotTelegram.PL.Desktop.Model
             throw new Exception(result.Message);
         }
 
-        
+
     }
 }

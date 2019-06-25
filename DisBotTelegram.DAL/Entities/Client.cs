@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace DisBotTelegram.DAL.Entities
 {
     [Table("Clients")]
-    internal class Client : IBaseEntity , IAuditable
+    internal class Client : IBaseEntity, IAuditable
     {
         public int Id { get; set; }
         public string TelegramId { get; set; }
@@ -24,8 +24,6 @@ namespace DisBotTelegram.DAL.Entities
         public DateTime? CreatedOn { get; set; }
         public string UpdatedBy { get; set; }
         public DateTime? UpdatedOn { get; set; }
-
-        
 
     }
 }

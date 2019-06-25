@@ -9,7 +9,7 @@ using DisBotTelegram.DAL.Entities;
 
 namespace DisBotTelegram.DAL.Initializers
 {
-     internal class BotTelegramInitializater : DropCreateDatabaseAlways<BotTelegramContext>
+    internal class BotTelegramInitializater : CreateDatabaseIfNotExists<BotTelegramContext>
     {
         protected override void Seed(BotTelegramContext db)
         {

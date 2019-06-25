@@ -9,12 +9,14 @@ using System.Collections.Generic;
 
 namespace DisBotTelegram.BLL.Services
 {
-    internal class ClientService: BaseService, IClientService
+    internal class ClientService : BaseService, IClientService
     {
         protected override Action<IMapperConfigurationExpression> MapperCustomConfiguration =>
          cfg =>
          {
-             cfg.CreateMap<Client, ClientInfo>().ReverseMap();
+             cfg.CreateMap<Client, ClientInfo>()
+             .ForPath(x => x.Messages, m => m.MapFrom(a => a.ClientMessages))
+             .ReverseMap();
          };
 
         public ResultOperationInfo<IEnumerable<ClientInfo>> GetAll()

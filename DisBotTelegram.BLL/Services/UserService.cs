@@ -17,7 +17,9 @@ namespace DisBotTelegram.BLL.Services
         protected override Action<IMapperConfigurationExpression> MapperCustomConfiguration =>
          cfg =>
          {
-             cfg.CreateMap<User, UserInfo>().ReverseMap();
+             cfg.CreateMap<User, UserInfo>()
+             .ForPath(x => x.Messages, m => m.MapFrom(a => a.DispatherMessages))
+             .ReverseMap();
          };
 
         public ResultOperationInfo<IEnumerable<UserInfo>> GetAll()

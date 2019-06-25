@@ -12,13 +12,13 @@ namespace DisBotTelegram.DAL.Entities
     [Table("ClientMessages")]
     internal class ClientMessage : IBaseEntity, IAuditable
     {
-        
+
         public int Id { get; set; }
         public string MessageClient { get; set; }
         public int UserId { get; set; }
         public string TelegramId { get; set; }
         public DateTime TimeMassage { get; set; }
-        
+
         public int ClientId { get; set; }
         public virtual Client Client { get; set; }
 

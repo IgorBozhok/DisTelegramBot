@@ -14,6 +14,8 @@ namespace DisBotTelegram.BLL.DTO
         public string FirstName { get; set; }
         public string LastName { get; set; }
 
+        public List<ClientMessageInfo> Messages { get; set; }
+
         public override string ToString()
         {
             return $"{FirstName} {LastName} {TelegramId}";

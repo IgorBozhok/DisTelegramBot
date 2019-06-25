@@ -24,7 +24,7 @@ namespace DisBotTelegram.BLL.Services
 
         public ResultOperationInfo<IEnumerable<ClientMessageInfo>> GetAll()
         {
-            var collection = UnitOfWork.GetRepository<ClientMessage>().GetAllIncluding(p =>p.Client);
+            var collection = UnitOfWork.GetRepository<ClientMessage>().GetAllIncluding(p => p.Client);
             var collectionInfo = MapperInstance.Map<IEnumerable<ClientMessage>, IEnumerable<ClientMessageInfo>>(collection);
             return new ResultOperationInfo<IEnumerable<ClientMessageInfo>>(collectionInfo, true, Localization.Success_OperationComplited);
         }

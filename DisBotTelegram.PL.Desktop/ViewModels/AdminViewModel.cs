@@ -125,7 +125,9 @@ namespace DisBotTelegram.PL.Desktop.ViewModels
         public string Paswword
         {
             get { return _password; }
-            set { _password = value; OnPropertyChanged();
+            set
+            {
+                _password = value; OnPropertyChanged();
                 OnPropertyChanged("IsCorrectPassword");
             }
         }
@@ -137,17 +139,17 @@ namespace DisBotTelegram.PL.Desktop.ViewModels
                 _repeatPassword = value;
                 if (Paswword.Equals(RepeatPassword))
                 {
-                   // IsCorrectPassword = true;
+                    // IsCorrectPassword = true;
                     CheckPaswwordText = "Password is correct";
                 }
                 else if (String.IsNullOrEmpty(RepeatPassword))
                 {
-                   // IsCorrectPassword = false;
+                    // IsCorrectPassword = false;
                     CheckPaswwordText = "Password entry is`t correct";
                 }
                 else
                 {
-                   // IsCorrectPassword = false;
+                    // IsCorrectPassword = false;
                     CheckPaswwordText = "Enter сonfirm зassword";
                 }
                 OnPropertyChanged();
@@ -216,7 +218,7 @@ namespace DisBotTelegram.PL.Desktop.ViewModels
             SaveCommand = new RelayCommand(OnSaveCommand, CanOnSaveExecute);
         }
         #endregion
-  
+
         #region Commands
         private bool CanOnSaveExecute(object obj)
         {
@@ -254,19 +256,23 @@ namespace DisBotTelegram.PL.Desktop.ViewModels
             Messages.Clear();
             _toDate += new TimeSpan(23, 59, 59);
 
-            var clientMessagesAll = Clients.Join(ClentMessages, c => c.Id, d => d.ClientId, (c, d) => new { client = c, clientMessage = d }).Select(p => new { userName = p.client.TelegramId, dateTime = p.clientMessage.TimeMassage, message = p.clientMessage.MessageClient, userId = p.clientMessage.UserId, clientId = p.clientMessage.ClientId});
-            var dispatcharMessagesAll = Users.Join(DispatcherMessages, c => c.Id, d => d.UserId, (c, d) => new { user = c, dispatcharMessage = d }).Select(p => new { userName = p.user.UserLogin, dateTime = p.dispatcharMessage.TimeMassage, message = p.dispatcharMessage.MessageDispather, userId = p.dispatcharMessage.UserId, clientId = p.dispatcharMessage.ClientId});
+            var clientMessagesAll = Clients.Join(ClentMessages, c => c.Id, d => d.ClientId, (c, d) => new { client = c, clientMessage = d }).Select(p => new { userName = p.client.TelegramId, dateTime = p.clientMessage.TimeMassage, message = p.clientMessage.MessageClient, userId = p.clientMessage.UserId, clientId = p.clientMessage.ClientId });
+            var dispatcharMessagesAll = Users.Join(DispatcherMessages, c => c.Id, d => d.UserId, (c, d) => new { user = c, dispatcharMessage = d }).Select(p => new { userName = p.user.UserLogin, dateTime = p.dispatcharMessage.TimeMassage, message = p.dispatcharMessage.MessageDispather, userId = p.dispatcharMessage.UserId, clientId = p.dispatcharMessage.ClientId });
 
             if (UserLinq != null && ClientLinq != null)
             {
-                var messageAll = clientMessagesAll.Union(dispatcharMessagesAll).Where(p => p.userName == _userLinq.UserLogin || p.userName == _clientLinq.TelegramId).Where(p => p.dateTime >= _fromDate && p.dateTime <= _toDate).Where(p => p.userId == _userLinq.Id && p.clientId == _clientLinq.Id).OrderBy(p => p.dateTime);
-                foreach (var item in messageAll)
+
+                var messageUser = Users.Where(user => user.Id == UserLinq.Id).SelectMany(a => a.Messages).Select(p => new { name = UserLinq.UserLogin, dt = p.TimeMassage, message = p.MessageDispather, userId = p.UserId, clientId = p.ClientId });
+                var clientMessages = Clients.Where(client => client.Id == ClientLinq.Id).SelectMany(a => a.Messages).Select(p => new { name = ClientLinq.TelegramId, dt = p.TimeMassage, message = p.MessageClient, userId = p.UserId, clientId = p.ClientId });
+                var allMessage = messageUser.Union(clientMessages).Where(p => p.name == _userLinq.UserLogin || p.name == _clientLinq.TelegramId).Where(p => p.dt >= _fromDate && p.dt <= _toDate).Where(p => p.userId == _userLinq.Id && p.clientId == _clientLinq.Id).OrderBy(x => x.dt).ToList();
+
+                foreach (var item in allMessage)
                 {
                     MessageAll tempMessage = new MessageAll()
                     {
-                        DateTime = item.dateTime,
+                        DateTime = item.dt,
                         Message = item.message,
-                        UserName = item.userName
+                        UserName = item.name
                     };
                     Messages.Add(tempMessage);
                 }
@@ -283,17 +289,8 @@ namespace DisBotTelegram.PL.Desktop.ViewModels
             }
             else
             {
-                var messageAll = clientMessagesAll.Union(dispatcharMessagesAll).Where(p => p.dateTime >= _fromDate && p.dateTime <= _toDate).OrderBy(p => p.dateTime).OrderBy(p => p.dateTime);
-                foreach (var item in messageAll)
-                {
-                    MessageAll tempMessage = new MessageAll()
-                    {
-                        DateTime = item.dateTime,
-                        Message = item.message,
-                        UserName = item.userName
-                    };
-                    Messages.Add(tempMessage);
-                }
+                MessageBox.Show("Не верно введены данные!!!");
+                return;
             }
         }
         #endregion

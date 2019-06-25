@@ -20,8 +20,8 @@ namespace DisBotTelegram.BLL.DTO
 
         public enum MessageType
         {
-            InMessage=0,
-            OutMessage=1
+            InMessage = 0,
+            OutMessage = 1
         }
     }
 }

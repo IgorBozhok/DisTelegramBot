@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace DisBotTelegram.BLL.Services
 {
-    internal class DispatcherMessageService: BaseService, IDispatcherMessageService
+    internal class DispatcherMessageService : BaseService, IDispatcherMessageService
     {
         protected override Action<IMapperConfigurationExpression> MapperCustomConfiguration =>
          cfg =>
