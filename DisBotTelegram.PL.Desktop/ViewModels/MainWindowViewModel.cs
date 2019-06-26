@@ -1,5 +1,6 @@
 ﻿using DisBotTelegram.BLL;
 using DisBotTelegram.BLL.DTO;
+using DisBotTelegram.BLL.Helper;
 using DisBotTelegram.BLL.Interfaces;
 using DisBotTelegram.BLL.Services;
 using DisBotTelegram.PL.Desktop.Helper;
@@ -110,7 +111,7 @@ namespace DisBotTelegram.PL.Desktop.ViewModels
                         break;
                     }
                     IsConnectedDispatcher = true;
-                    StaticLogin.UserInfo = item;
+                    StaticLogicBot.UserInfo = item;
                     break;
                 }
                 else

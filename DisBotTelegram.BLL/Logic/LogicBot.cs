@@ -1,31 +1,21 @@
 ﻿using DisBotTelegram.BLL.DTO;
-using DisBotTelegram.BLL.Interfaces;
-using DisBotTelegram.BLL.Services;
-using DisBotTelegram.PL.Desktop.Helper;
-using DisBotTelegram.PL.Desktop.Model;
 using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows;
 using Telegram.Bot;
 using Telegram.Bot.Args;
 using Telegram.Bot.Types;
 using Telegram.Bot.Types.Enums;
-using Unity;
+using DisBotTelegram.BLL.Helper;
 
-namespace DisBotTelegram.BLL
+namespace DisBotTelegram.BLL.Logic
 {
-    public class BotLogic
+    public class LogicBot
     {
-
-        private SynchronizationContext _synchronizationContext;
+        private System.Threading.SynchronizationContext _synchronizationContext;
         private TelegramBotClient _botclient;
 
-        public Action<DisBotMessage> Log { get; set; }
+        public Action<DTO.DisBotMessage> Log { get; set; }
 
         private DisBotMessage _masseges;
 
@@ -35,7 +25,7 @@ namespace DisBotTelegram.BLL
             set { _masseges = value; }
         }
 
-        public BotLogic()
+        public LogicBot()
         {
             _masseges = new DisBotMessage();
             _synchronizationContext = SynchronizationContext.Current;
@@ -97,7 +87,7 @@ namespace DisBotTelegram.BLL
             _masseges.Content = e.Message.Text;
             _masseges.Type = DisBotMessage.MessageType.OutMessage;
             _synchronizationContext.Post(obj => Log?.Invoke(_masseges), null);
-            await _botclient.SendTextMessageAsync(chatId: e.Message.Chat, text: StaticLogin.UserInfo.UserLogin);
+            await _botclient.SendTextMessageAsync(chatId: e.Message.Chat, text: StaticLogicBot.UserInfo.UserLogin);
         }
     }
 }

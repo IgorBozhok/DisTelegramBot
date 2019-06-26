@@ -68,6 +68,7 @@
     <Compile Include="DTO\DispatcherMessageInfo.cs" />
     <Compile Include="DTO\UserInfo.cs" />
     <Compile Include="DTO\WorkTimeDispatcherInfo.cs" />
+    <Compile Include="Helper\StaticLogicBot.cs" />
     <Compile Include="Interfaces\IClientMessageService.cs" />
     <Compile Include="Interfaces\IClientService.cs" />
     <Compile Include="Interfaces\IDispatcherMessageService.cs" />
@@ -79,6 +80,7 @@
       <DependentUpon>Localization.resx</DependentUpon>
     </Compile>
     <Compile Include="DTO\Helpers\ResultOperationInfo.cs" />
+    <Compile Include="Logic\LogicBot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\Base\BaseService.cs" />
     <Compile Include="Services\ClientMessageService.cs" />

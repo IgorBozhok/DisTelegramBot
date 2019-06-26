@@ -129,8 +129,9 @@
                  Grid.ColumnSpan="3"
                  HorizontalContentAlignment="Stretch"
                  Margin="5"
-                 ItemsSource="{Binding Messages}"
-                 SelectedItem="{Binding ChoiceClient}">
+                 Name="MainList"
+                 ItemsSource="{Binding Messages}">
+            
             <ListBox.ItemTemplateSelector>
                 <TemplateSelector:MEssageViewTemplateSelector 
                     InMessage="{StaticResource InMessageTemplate}"
@@ -153,7 +154,7 @@
                  Margin="4"
                  Text="{Binding MessageChat, UpdateSourceTrigger=PropertyChanged}">
             <TextBox.InputBindings>
-                <KeyBinding Command="{Binding Path=SendMessageCommand}" Key="Enter" />
+                <KeyBinding Command="{Binding Path=SendMessageCommand}" CommandParameter="{Binding ElementName=MainList}" Key="Enter"/>
             </TextBox.InputBindings>
         </TextBox>
         <Button Grid.Column="3"
@@ -162,6 +163,7 @@
                 Content="Send"
                 Margin="5"
                 Command="{Binding SendMessageCommand}"
+                CommandParameter="{Binding ElementName=MainList}"
                 IsEnabled="{Binding IsSendMessage}"/>
         <Button Grid.Column="3"
                 Grid.Row="3"

@@ -1,6 +1,8 @@
 ﻿using DisBotTelegram.BLL;
 using DisBotTelegram.BLL.DTO;
+using DisBotTelegram.BLL.Helper;
 using DisBotTelegram.BLL.Interfaces;
+using DisBotTelegram.BLL.Logic;
 using DisBotTelegram.BLL.Services;
 using DisBotTelegram.PL.Desktop.Helper;
 using DisBotTelegram.PL.Desktop.Model;
@@ -9,6 +11,7 @@ using System;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Input;
 using Unity;
 
@@ -17,7 +20,8 @@ namespace DisBotTelegram.PL.Desktop.ViewModels
     public class DispatcherViewModel : BaseViewModel
     {
         #region Fields
-        private BotLogic _botLogic;
+        private ListBox _mainListBox;
+        private LogicBot _botLogic;
         private UnityContainer _container;
         private ModelClientMessageService _modelClientMessageService;
         private ModelClientService _modelClientService;
@@ -84,13 +88,11 @@ namespace DisBotTelegram.PL.Desktop.ViewModels
             get { return _isConnect; }
             set { _isConnect = value; OnPropertyChanged(); }
         }
-
         public bool IsDisconnect
         {
             get { return _isDisconnect; }
             set { _isDisconnect = value; OnPropertyChanged(); }
         }
-
         public bool IsSendMessage
         {
             get { return _isSendMessage; }
@@ -103,12 +105,18 @@ namespace DisBotTelegram.PL.Desktop.ViewModels
             set { _clientsChat = value; OnPropertyChanged(); }
         }
 
+        public ListBox MainListBox
+        {
+            get { return _mainListBox ?? (_mainListBox = new ListBox()); }
+            set { _mainListBox = value; OnPropertyChanged(); }
+
+        }
         #endregion
 
         #region Ctor
         public DispatcherViewModel()
         {
-            _botLogic = new BotLogic();
+            _botLogic = new LogicBot();
             _container = new UnityContainer();
             _container.RegisterType<IClientMessageService, ClientMessageService>();
             _container.RegisterType<IClientService, ClientService>();
@@ -122,6 +130,7 @@ namespace DisBotTelegram.PL.Desktop.ViewModels
             _clients = _modelClientService.GetClients();
             _clientsChat = new ObservableCollection<ClientInfo>();
 
+            _mainListBox = new ListBox();
 
             for (int i = 0; i < Application.Current.Windows.Count; i++)
             {
@@ -173,7 +182,7 @@ namespace DisBotTelegram.PL.Desktop.ViewModels
 
         private void EventPost()
         {
-            UserInfo = StaticLogin.UserInfo;
+            UserInfo = StaticLogicBot.UserInfo;
             Console.WriteLine();
             _botLogic.Log += buffer =>
             {
@@ -230,7 +239,8 @@ namespace DisBotTelegram.PL.Desktop.ViewModels
                     TelegramId = _botLogic.Masseges.Id,
                     Username = _botLogic.Masseges.UserName,
                 };
-                ;
+
+
                 if (_clientsChat.Count == 0)
                 {
                     _clientsChat.Add(addClientList);
@@ -253,9 +263,19 @@ namespace DisBotTelegram.PL.Desktop.ViewModels
                         break;
                     }
                 }
+                var message = new DisBotMessage()
+                {
+                    Content = _botLogic.Masseges.Content,
+                    Date = _botLogic.Masseges.Date,
+                    LastName = _botLogic.Masseges.LastName,
+                    FirstName = _botLogic.Masseges.FirstName,
+                    UserName = _botLogic.Masseges.UserName,
+                    Type = DisBotMessage.MessageType.OutMessage,
+                };
 
+                Messages.Add(message);
+                _mainListBox.ScrollIntoView(message);
 
-                Messages.Add(buffer);
                 _clients = _modelClientService.GetClients();
                 var tmpId = 0;
                 foreach (var item in _clients)
@@ -268,7 +288,6 @@ namespace DisBotTelegram.PL.Desktop.ViewModels
                 }
 
                 CheckUserName();
-
 
                 var messageDB = new ClientMessageInfo()
                 {
@@ -284,8 +303,16 @@ namespace DisBotTelegram.PL.Desktop.ViewModels
                 }
             };
         }
+
+        private void _mainListBox_FocusableChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
         private void OnSendMessageCommandExecute(object obj)
         {
+            _mainListBox = obj as ListBox;
+
             if (String.IsNullOrEmpty(UserName))
             {
                 return;
@@ -313,7 +340,9 @@ namespace DisBotTelegram.PL.Desktop.ViewModels
                 UserName = UserInfo.UserLogin,
                 Type = DisBotMessage.MessageType.InMessage,
             };
+
             Messages.Add(message);
+            _mainListBox.ScrollIntoView(message);
 
             var addDispatcherMessage = new DispatcherMessageInfo()
             {
